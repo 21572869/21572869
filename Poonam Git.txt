@@ -1,0 +1,320 @@
+
+21572869@EBY04005D08212 MINGW64 ~
+$ git --version
+git version 2.38.1.windows.1
+
+21572869@EBY04005D08212 MINGW64 ~
+$ ^[[200~git config --global user.name "John Smith"
+bash: $'\E[200~git': command not found
+
+21572869@EBY04005D08212 MINGW64 ~
+$ git config --global user.name "Poonam"
+
+21572869@EBY04005D08212 MINGW64 ~
+$ git config --global user.email 21572869@student.uwl.ac.uk
+
+21572869@EBY04005D08212 MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+'IGG_Week 5 Practical.ipynb'
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ MSc_Bioinformatics/
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+'OneDrive - University of West London'/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Untitled.ipynb
+ Videos/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+
+21572869@EBY04005D08212 MINGW64 ~
+$ cd MSc_Bioinformatics
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ ls -lh
+total 0
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ git clone https://github.com/21572869/MSC_BI_22.git
+Cloning into 'MSC_BI_22'...
+warning: You appear to have cloned an empty repository.
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ ^C
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ cd MSc_Bioinformatics
+bash: cd: MSc_Bioinformatics: No such file or directory
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ ls
+MSC_BI_22/
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ touch Poonam.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ ls
+MSC_BI_22/  Poonam.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ touch HelloWorld.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ touch Adding.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ touch Looping.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics
+$ git init
+Initialized empty Git repository in C:/Users/21572869/MSc_Bioinformatics/.git/
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Adding.txt
+        HelloWorld.txt
+        Looping.txt
+        MSC_BI_22/
+        Poonam.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add Adding.txt HelloWorld.txt Looping.txt MSC_BI_22/Poonam.txt
+fatal: pathspec 'MSC_BI_22/Poonam.txt' did not match any files
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add Adding.txt HelloWorld.txt Looping.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Adding.txt
+        new file:   HelloWorld.txt
+        new file:   Looping.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MSC_BI_22/
+        Poonam.txt
+
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add Poonam.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Adding.txt
+        new file:   HelloWorld.txt
+        new file:   Looping.txt
+        new file:   Poonam.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MSC_BI_22/
+
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add MSC_BI_22/
+error: 'MSC_BI_22/' does not have a commit checked out
+fatal: adding files failed
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ touch MSC_BI_22/
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add MSC_BI_22
+error: 'MSC_BI_22/' does not have a commit checked out
+fatal: adding files failed
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add MSC_BI_22/
+error: 'MSC_BI_22/' does not have a commit checked out
+fatal: adding files failed
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add MSC_BI_22/Poonam.txt
+fatal: pathspec 'MSC_BI_22/Poonam.txt' did not match any files
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add MSC_BI_22/Poonam.txt
+fatal: pathspec 'MSC_BI_22/Poonam.txt' did not match any files
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Adding.txt
+        new file:   HelloWorld.txt
+        new file:   Looping.txt
+        new file:   Poonam.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MSC_BI_22/
+
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ touch MSC_BI_22
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add MSC_BI_22
+error: 'MSC_BI_22/' does not have a commit checked out
+fatal: adding files failed
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ touch MSC_BI_22/
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add MSC_BI_22/
+error: 'MSC_BI_22/' does not have a commit checked out
+fatal: adding files failed
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ echo world >> Adding.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Adding.txt
+        new file:   HelloWorld.txt
+        new file:   Looping.txt
+        new file:   Poonam.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Adding.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MSC_BI_22/
+
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ ~/MSc_Bioinformatics
+$ ^C
+~/MSc_Bioinformatics
+$ ^C
+bash: /c/Users/21572869/MSc_Bioinformatics: Is a directory
+bash: $: command not found
+bash: /c/Users/21572869/MSc_Bioinformatics: Is a directory
+bash: $: command not found
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ touch MSC_BI_22/
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Adding.txt
+        new file:   HelloWorld.txt
+        new file:   Looping.txt
+        new file:   Poonam.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Adding.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MSC_BI_22/
+
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git restore <MSC_BI_22>
+bash: syntax error near unexpected token `newline'
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git restore MSC_BI_22
+error: pathspec 'MSC_BI_22' did not match any file(s) known to git
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git commit -m 'This is initial commit'
+[master (root-commit) 55da292] This is initial commit
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Adding.txt
+ create mode 100644 HelloWorld.txt
+ create mode 100644 Looping.txt
+ create mode 100644 Poonam.txt
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git add Adding.txt HelloWorld.txt Looping.txt
+warning: in the working copy of 'Adding.txt', LF will be replaced by CRLF the next time Git touches it
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Adding.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MSC_BI_22/
+
+
+21572869@EBY04005D08212 MINGW64 ~/MSc_Bioinformatics (master)
+$
